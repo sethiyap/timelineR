@@ -7,12 +7,11 @@ always_allow_html: true
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
-  fig.path = "Images/",
   out.width = "100%"
 )
 ```
 #timelineR
-##### Historical events visualisation in chronological order
+### Historical events visualisation in chronological order
 
 Sample data to view events chronologically 
 ```{r,  echo=TRUE, eval=TRUE, message=FALSE}
@@ -24,7 +23,7 @@ knitr::kable(tidy_df)
 
 > This is a dummy data, generated only for visualisation purpose
 
-###### Horizontal timeline 
+#### Horizontal timeline 
 Two features associated with each time-point can be plotted. For instance, the sport first known and the country of origin. 
 1. Timeline is plotted horizontally  
 
@@ -35,7 +34,7 @@ source("R/timeline_theme.R")
 chronological_timeline(tidy_df=tidy_df,text = FALSE,horizontal = TRUE)
 ```
 
-###### Vertical timeline 
+#### Vertical timeline 
 2. Timeline is plotted vertically  
 
 ```{r,  echo=TRUE,eval=TRUE, message=FALSE, warning=FALSE}
