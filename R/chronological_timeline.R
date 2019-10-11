@@ -12,8 +12,9 @@
 #' @export
 #'
 #' @examples
-chronological_timeline_horizontal <- function(tidy_df, text=TRUE, horizontal=TRUE){
+chronological_timeline <- function(tidy_df, text=TRUE, horizontal=TRUE){
 
+          library(tidyverse)
          names(tidy_df) <- c("year", "upper", "lower")
            tidy_timeline <- tidy_df %>% dplyr::arrange(year) %>%
                     dplyr::mutate(previous_year= dplyr::lag(year, default=rlang::as_double(year)[1]),
@@ -22,7 +23,7 @@ chronological_timeline_horizontal <- function(tidy_df, text=TRUE, horizontal=TRU
                                   ratio=cumsum(ratio_1)) %>%
                     dplyr::select(-c("ratio_1", "difference", "previous_year")) %>% # compute proportion i.e higher value for higher difference
                     tidyr::gather(position, events,-year, -ratio) %>%
-                    dplyr::mutate(y_axis=if_else(position=="upper", seq(0.5,nrow(dd),by = 0.5), seq(-nrow(dd),-0.5,by = 0.5)))
+                    dplyr::mutate(y_axis=if_else(position=="upper", seq(0.5,nrow(tidy_df),by = 0.5), seq(-nrow(tidy_df),-0.5,by = 0.5)))
 
 
          direction <- dplyr::if_else(horizontal==TRUE, "x", "y")

@@ -6,7 +6,7 @@ always_allow_html: true
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
-  comment = "#>",
+  comment = "#>", 
   out.width = "100%"
 )
 ```
