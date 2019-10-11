@@ -1,0 +1,46 @@
+---
+output: github_document
+always_allow_html: true      
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "Images/",
+  out.width = "100%"
+)
+```
+#timelineR
+##### Historical events visualisation in chronological order
+
+Sample data to view events chronologically 
+```{r,  echo=TRUE, eval=TRUE, message=FALSE}
+
+tidy_df <- tibble::tibble(year=c(490,847, 1200,1400, 1400, 1700, 1900), event=c( "Marathon","Long throw", "Swimming","Skating","Golf","Surfing","Basketball" ), person=c("Athens", "Greece", "Britan", "Dutch", "Scotland","Polynesia", "USA" ))
+
+knitr::kable(tidy_df)
+```
+
+> This is a dummy data, generated only for visualisation purpose
+
+###### Horizontal timeline 
+Two features associated with each time-point can be plotted. For instance, the sport first known and the country of origin. 
+1. Timeline is plotted horizontally  
+
+
+```{r,  echo=TRUE,eval=TRUE, message=FALSE, warning=FALSE}
+source("R/chronological_timeline.R")
+source("R/timeline_theme.R")
+chronological_timeline(tidy_df=tidy_df,text = FALSE,horizontal = TRUE)
+```
+
+###### Vertical timeline 
+2. Timeline is plotted vertically  
+
+```{r,  echo=TRUE,eval=TRUE, message=FALSE, warning=FALSE}
+source("R/chronological_timeline.R")
+source("R/timeline_theme.R")
+chronological_timeline(tidy_df=tidy_df,text = TRUE,horizontal = FALSE)
+```
+
