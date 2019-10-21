@@ -5,7 +5,7 @@ timelineR
 ### Historical events visualisation in chronological order
 
 <!-- badges: start -->
-[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental) <!-- badges: end -->
+[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental) [![Launch binder](http://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/sethiyap/timelineR/master) <!-- badges: end -->
 
 Sample data to view events chronologically
 
