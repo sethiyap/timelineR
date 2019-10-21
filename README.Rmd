@@ -6,12 +6,18 @@ always_allow_html: true
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
-  comment = "#>", 
+  comment = "#>",
   out.width = "100%"
 )
 ```
 #timelineR
+
+
 ### Historical events visualisation in chronological order
+
+<!-- badges: start -->
+  [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
+<!-- badges: end -->
 
 Sample data to view events chronologically 
 ```{r,  echo=TRUE, eval=TRUE, message=FALSE}
